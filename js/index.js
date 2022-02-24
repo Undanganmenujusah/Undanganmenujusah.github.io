@@ -104,4 +104,5 @@ $('.copy-address').on("click", function(){
 
 $('.invitation-btn').on("click", function(){
     document.getElementById("overlay").style.display = "none";
+    document.getElementById("au").play();
 })
