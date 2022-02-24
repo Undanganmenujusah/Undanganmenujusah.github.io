@@ -72,7 +72,15 @@
                     Kepada Bapak/Ibu/Saudara/Sahabat
                 </p>
                 <p class="name d-block mb-4">
-                    <?php echo isset($_GET['nama']) ? $_GET['nama'] : " " ?>
+                    <script>
+                        let nama = "";
+                        const params = new URLSearchParams(window.location.search);
+                        
+                        if( params.has('nama')) {
+                            nama = params.get('nama').toString();
+                        }
+                        document.getElementById("nama").innerHTML = nama;
+                    </script>
                 </p>
             </div>
         </div>
