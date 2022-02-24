@@ -71,15 +71,9 @@
                 <p class="caption d-block mb-3">
                     Kepada Bapak/Ibu/Saudara/Sahabat
                 </p>
-                <p class="name d-block mb-4">
+                <p id="nama2" class="name d-block mb-4">
                     <script>
-                        let nama = "";
-                        const params = new URLSearchParams(window.location.search);
-                        
-                        if( params.has('nama')) {
-                            nama = params.get('nama').toString();
-                        }
-                        document.getElementById("nama").innerHTML = nama;
+                        document.getElementById("nama2").innerHTML = nama;
                     </script>
                 </p>
             </div>
