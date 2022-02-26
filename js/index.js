@@ -83,16 +83,8 @@ function resetList(){
 }
 
 // Copy Bank to clipboard
-$('.copy-no-1').on("click", function(){
-    var value = $("#no-rek-text-1").text();
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val(value).select();
-    document.execCommand("copy");
-    $temp.remove();
-})
-$('.copy-no-2').on("click", function(){
-    var value = $("#no-rek-text-2").text();
+$('.copy-no').on("click", function(){
+    var value = $("#no-rek-text").text();
     var $temp = $("<input>");
     $("body").append($temp);
     $temp.val(value).select();
