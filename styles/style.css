@@ -37,6 +37,7 @@ body {
 }
 
 #overlay {
+    display: none;
     position: relative;
     height: 100vh;
     z-index: 2;
