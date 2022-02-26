@@ -102,7 +102,48 @@ $('.copy-address').on("click", function(){
     $temp.remove();
 })
 
+// disable scrolling
+$('html, body').css({
+    overflow: 'hidden',
+});
+
+
 $('.invitation-btn').on("click", function(){
     document.getElementById("overlay").style.display = "none";
     document.getElementById("au").play();
+
+    $('html, body').css({
+        overflow: 'auto',
+    });
+
+    $('#au').trigger('play');
+
+    window.scrollTo(0,0);
 })
+
+var audio = true;
+
+
+$('#button-control').on("click",function(){
+    
+    controlAudioIcon();
+    audio = !audio;
+    controlAudioSound();
+})
+
+function controlAudioIcon() {
+    if(audio){
+        $('.audio-img').attr('src',"https://img.icons8.com/ios-glyphs/30/000000/no-audio--v1.png");
+    }else {
+        $('.audio-img').attr('src',"https://img.icons8.com/ios-glyphs/30/000000/high-volume--v1.png");
+    }
+}
+
+function controlAudioSound(){
+    if(audio) {
+        $('#au').trigger('play');
+    }else {
+        $('#au').trigger('pause');
+        $('#au').prop("currentTime",0);
+    }
+}

@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <audio id="au" preload="auto">
+    <audio id="au" preload="none">
         <source src="audio/Summer.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
@@ -165,7 +165,7 @@
                         id="gmap_canvas" 
                         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Jl.%20Tanimbar%20No.22,%20kota%20malang%20Malang+(alamat)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                     </iframe> 
-                        <a href='https://embedmaps.net'>embed google map on website</a> 
+                        <a class="google-maps-desc" href='https://embedmaps.net'>embed google map on website</a> 
                         <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=cab9f28daf9adb88cfe5ce33d33c6e6f9c770792'></script>
                 </div>
             </div>
@@ -270,6 +270,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="audio-button">
+        <button id="button-control">
+            <img class="audio-img" src="https://img.icons8.com/ios-glyphs/30/000000/high-volume--v1.png"/>
+        </button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>

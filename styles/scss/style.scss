@@ -38,6 +38,144 @@ body {
     }
 }
 
+#overlay {
+    position: relative;
+    height: 100vh;
+    z-index: 2;
+
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
+        .bg-heading {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center
+        }
+
+        .mask {
+            @include absolute-fill;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            opacity: 60%
+        }
+
+    }
+
+    .content {
+        z-index: 1;
+        @include large {
+            width: 50%;
+        }
+        
+        @include small-mobile {
+            width: 100%;
+        }
+
+        h6 {
+            font-family: $secondary-font;
+            font-size: 18px;
+
+            @include small-mobile {
+                font-size: 14px;
+            }
+        }
+
+        h1 {
+            font-family: $accent-font;
+            font-size: 96px;
+
+            @include small-mobile {
+                font-size: 52px;
+            }
+        }
+
+        .separator {
+            position: relative;
+            font-family: $secondary-font;
+            font-size: 16px;
+
+            @include small-mobile {
+                font-size: 14px;
+            }
+
+            &::before{
+                content: "";
+                display: block;
+                width: 35%;
+                height: 1px;
+                background: $gray-4;
+                left: 0;
+                top: 50%;
+                position: absolute;
+            }
+
+            &::after {
+                content: "";
+                display: block;
+                width: 35%;
+                height: 1px;
+                background: $gray-4;
+                right: 0;
+                top: 50%;
+                position: absolute;
+            }
+        }
+
+        .date {
+            font-family: $secondary-font;
+            font-size: 36px;
+            font-weight: $font-bold;
+            margin-bottom: $sizing-standard * 8;
+
+            @include small-mobile {
+                font-size: 20px;
+            }
+        }
+
+        .caption {
+            font-size: 18px;
+
+            @include small-mobile {
+                font-size: 14px;
+            }
+        }
+
+        .name {
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: $font-bold;
+            overflow-y: auto;
+
+            @include small-mobile {
+                font-size: 148x;
+            }
+        }
+
+        .invitation-btn {
+            font-size: 18px;
+            color: white;
+            padding: $sizing-standard 50px;
+            background-color: transparent;
+            border: solid 1px $gray-4;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                color: $black;
+            }
+        }
+    }
+}
+
 #heading {
     position: relative;
     height: 100vh;
@@ -318,6 +456,10 @@ body {
         height: 400px;
         object-fit: cover;
     }
+
+    .google-maps-desc {
+        color: $black;
+    }
 }
 
 #caption {
@@ -355,7 +497,7 @@ body {
 
         @include small-mobile {
             right: $sizing-standard * 2;
-            top:65%; 
+            top:85%; 
 
             .decor-img {
                 width: 65px;
@@ -552,4 +694,34 @@ body {
 
     }
 
+}
+
+#audio-button {
+    position: fixed;
+    z-index: 2;
+
+    bottom: 8%;
+    right: 8%;
+
+    @include small-mobile {
+        bottom: $sizing-standard * 4;
+        right: $sizing-standard * 4;
+    }
+
+    button {
+        width: 52px;
+        height: 52px;
+        padding: $sizing-standard;
+        border: 0;
+        border-radius: 50%;
+
+        background-color: white;
+        box-shadow: 8px 8px 12px 0px rgba($black,.3);
+
+        img {
+            width: 100%;
+            transform: rotate(-25deg);
+            object-fit: contain;
+        }
+    }
 }
