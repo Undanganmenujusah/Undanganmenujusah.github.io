@@ -29,6 +29,17 @@ body {
 }
 
 .section-heading  {
+    font-family: $accent-font;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: $sizing-standard * 7;
+
+    @include small-mobile {
+        font-size: 28px;
+    }
+}
+
+.caption-section-heading  {
     font-family: $caption-heading-font;
     font-size: 48px;
     text-align: center;
