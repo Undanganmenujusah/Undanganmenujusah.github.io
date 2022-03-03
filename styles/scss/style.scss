@@ -72,6 +72,28 @@ body {
             object-position: center
         }
 
+        .bg-heading-logo {
+            position: absolute;
+
+            @include large {
+                width: 16%;
+                top: 15%;
+                right: 0.8%;
+            }
+
+            @include tablet {
+                width: 16%;
+                top: 39%;
+                right: 0.8%;
+            }
+
+            @include small-mobile {
+                width: 16%;
+                top: 33%;
+                right: 0.8%;
+            }
+        }
+
         .mask {
             @include absolute-fill;
             width: 100%;
